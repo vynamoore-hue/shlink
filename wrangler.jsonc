@@ -1,8 +1,14 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "shortlink-video",
   "main": "./worker.js",
   "compatibility_date": "2026-09-19",
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "goto.vidufav.com",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
